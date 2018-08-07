@@ -1,0 +1,34 @@
+.container {
+    border: 2px solid skyblue;
+
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    font-size: 25px;
+    padding: 10px;
+    color: dodgerblue;
+    border: 3px solid dodgerblue;
+}
+
+button {
+    font-size: 25px;
+    padding: 10px;
+}
+
+.add-btn {
+    background: dodgerblue;
+    color: white;
+    border: 3px solid dodgerblue;
+}
+
+.todo-btn {
+    background: skyblue;
+    color: white;
+    text-transform: uppercase;
+}
+
+.todo-btn:hover {
+    background: deepskyblue;
+}

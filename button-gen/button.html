@@ -7,6 +7,16 @@
     body {
         background: linear-gradient(45deg, gold, silver);    
     }
+    button {
+        width: 40px; 
+        height: 40px;
+        font-size: 20px;
+        background: beige;
+        border: 0;
+    }
+    button:hover {
+        background: tomato;
+    }
     </style>
 
 </head>
@@ -15,8 +25,28 @@
     <h1>Button Generator</h1>
     <a href="../index.html">back to main</a>
 
+    <p>Generating buttons using DOM-API</p>
+
+    <div class="buttons"></div>
+
     <script>
-    
+        let i = 1;
+        let buttons = document.querySelector(".buttons");
+
+        function generateBtn() {
+            let btn = document.createElement('button');
+            btn.innerText = i++;
+            if (i % 2 == 0) {
+                btn.style.background = "yellow";
+            }
+            buttons.appendChild(btn);
+
+            if (i == 31) return;
+            setTimeout(generateBtn, 100);
+        }
+
+        generateBtn();
+
     </script>
 </body>
 
